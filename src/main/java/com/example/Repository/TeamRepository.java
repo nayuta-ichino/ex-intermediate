@@ -30,7 +30,7 @@ public class TeamRepository {
 		team.setLeagueName(rs.getString("league_name"));
 		team.setTeamName(rs.getString("team_name"));
 		team.setHeadquarters(rs.getString("headquarters"));
-		team.setInauguration(rs.getDate("inauguration"));
+		team.setInauguration(rs.getString("inauguration"));
 		team.setHistory(rs.getString("history"));
 
 		return team;
@@ -59,7 +59,7 @@ public class TeamRepository {
 	 */
 	public Team load(Integer id) {
 		// sql文を作成
-		String loadSql = "SELECT team_name, headquarters, inauguration, history FROM teams WHERE id = :id;";
+		String loadSql = "SELECT id, league_name, team_name, headquarters, inauguration, history FROM teams WHERE id = :id;";
 
 		// :idにデータを格納
 		SqlParameterSource params = new MapSqlParameterSource().addValue("id", id);

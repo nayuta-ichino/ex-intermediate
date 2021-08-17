@@ -5,6 +5,15 @@
 <title>Insert title here</title>
 </head>
 <body>
+<h1>野球チーム一覧</h1>
+
+<span th:each="team:${teamList}">
+	<a th:href="@{/exam1/team-show?id=} + ${team.id}">
+		<span th:text="${team.teamName}"></span>
+	</a>
+	
+	<br>
+</span>
 
 </body>
 </html>

@@ -1,7 +1,5 @@
 package com.example.domain;
 
-import java.util.Date;
-
 /**
  * チームの情報を表すドメイン.
  * 
@@ -17,7 +15,7 @@ public class Team {
 	/** 本拠地 */
 	private String headquarters;
 	/** 発足年 */
-	private Date inauguration;
+	private String inauguration;
 	/** 歴史 */
 	private String history;
 
@@ -59,11 +57,11 @@ public class Team {
 		this.headquarters = headquarters;
 	}
 
-	public Date getInauguration() {
+	public String getInauguration() {
 		return inauguration;
 	}
 
-	public void setInauguration(Date inauguration) {
+	public void setInauguration(String inauguration) {
 		this.inauguration = inauguration;
 	}
 

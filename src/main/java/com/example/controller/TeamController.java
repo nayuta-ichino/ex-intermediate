@@ -35,7 +35,7 @@ public class TeamController {
 	 * チームの詳細を表示.
 	 * 
 	 * @param model requestパラメーター
-	 * @param id ID
+	 * @param id    ID
 	 * @return 詳細ページへ遷移
 	 */
 	@RequestMapping("/team-show")
