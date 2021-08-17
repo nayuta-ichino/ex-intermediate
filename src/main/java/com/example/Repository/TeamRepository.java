@@ -51,6 +51,12 @@ public class TeamRepository {
 		return teamList;
 	}
 
+	/**
+	 * チームの1件検索を行いメソッド.
+	 * 
+	 * @param id ID
+	 * @return team 1件分のチームの詳細情報
+	 */
 	public Team load(Integer id) {
 		// sql文を作成
 		String loadSql = "SELECT team_name, headquarters, inauguration, history FROM teams WHERE id = :id;";
